@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>範例</title>
+  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+ 
+      $(document).ready(function(){
+         $("#red_disappear").click(function(){          
+         $("#div1").fadeOut("slow");  
+        });
+         $("#red_appear").click(function(){
+         $("#div1").fadeIn(3000);                    
+        });
+         $("#blue_up").click(function(){
+         $("#div2").fadeToggle();  
+        }); 
+         $("#black_fadeTo").click(function(){
+         $("#div3").fadeTo("slow", 0.15);
+        });
+      
+        
+        
+         $("#panel").click(function(){
+         $("#flip").slideUp("slow");
+        });
+          $("#flip").click(function(){
+          $("#panel").slideDown(5000);
+        });
+          $("#stop").click(function(){
+          $("#panel").stop();
+        });
+          
+        
+         
+         $("#Animation1").click(function(){
+        var div = $("#div6");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+         div.animate({fontSize: '2em'}, "slow");  
+       });
+        
+        
+        
+        
+      });
+  </script>
+  
+  <style> 
+   #panel, #flip {
+     padding: 5px;
+     text-align: center;
+     background-color: #BF0060;
+     border: solid 1px #c3c3c3;
+     width:80px;height:80px;
+     
+    }
+
+   #panel {
+    padding: 50px;
+    display: none;
+    }
+</style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</head>
+<body>
+  <div id="div1" style="width:550px;height:400px;background-image: url( 'https://farm8.staticflickr.com/7485/26561260270_f1b505d193_z.jpg' );"></div>
+   <button id="red_disappear">消失</button>
+   <button id="red_appear">出現</button>
+  <br>
+  <hr>
+  
+  <div id="div2" style="width:80px;height:80px;background-color:blue;"></div>
+   <button id="blue_up">fadeToggle</button>
+  
+  <div id="div3" style="width:80px;height:80px;background-color:black;"></div>
+   <button id="black_fadeTo">變淡</button>
+  <br>
+  <p>按下Click to slide down panel會出現Hello world!</p>
+  <p>按下Hello world!會出現Hello world!</p>
+  <div id="flip" >Click to slide down panel</div>
+  <div id="panel">Hello world!</div>
+  <button id="stop">Stop</button>
+  
+  
+  <br>
+  <br>
+  <button id="Animation1">Start Animation</button>
+  
+  <div id="div6" style="width:80px;height:80px;background-color:#ffaad5;">HELLO</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
